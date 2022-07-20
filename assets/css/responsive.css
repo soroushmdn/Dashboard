@@ -90,6 +90,15 @@
   .card {
     padding: 1rem 1.5rem;
   }
+
+  /* @@@@@@@@@@@@@@@@ recent @@@@@@@@@@@@@@@@@@ */
+  .recent__orders-table tr {
+    font-size: 0.75rem;
+  }
+
+  .recent__orders-table td:nth-child(4) {
+    font-size: 0.55rem;
+  }
 }
 
 @media (max-width: 374px) {
@@ -123,13 +132,5 @@
   .recent__orders-header h2,
   .recent__customers h2 {
     font-size: 1rem;
-  }
-
-  .recent__orders-table tr {
-    font-size: 0.75rem;
-  }
-
-  .recent__orders-table td:nth-child(4) {
-    font-size: 0.6rem;
   }
 }
