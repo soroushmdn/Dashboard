@@ -1,0 +1,505 @@
+/* @@@@@@@@@@@@ general @@@@@@@@@@@@ */
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap');
+
+:root {
+  --header-height: 4rem;
+  --nav-width: 70px;
+
+  --first-color: hsl(186, 56%, 30%);
+  --first-color-light: hsl(186, 56%, 50%);
+  --body-color: hsl(186, 50%, 98%);
+  --border-color: hsl(186, 0%, 70%);
+  --white-color: hsl(252, 38%, 97%);
+  --text-color: hsl(186, 0%, 50%);
+
+  --body-font: 'Nunito', sans-serif;
+  --normal-font-size: 1rem;
+}
+
+@media (max-width: 992px) {
+  :root {
+    --normal-font-size: 0.9rem;
+  }
+}
+
+*,
+::before,
+::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+  text-decoration: none;
+  list-style-type: none;
+}
+
+body {
+  padding: 0 1.5rem 0 calc(var(--nav-width) + 1.5rem);
+  margin-top: var(--header-height);
+
+  font-family: var(--body-font);
+  font-size: var(--normal-font-size);
+  background-color: var(--body-color);
+  transition: 0.5s;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+button,
+input {
+  font-family: var(--body-font);
+  font-size: var(--normal-font-size);
+  border: none;
+  outline: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+/* @@@@@@@@@@@@ header @@@@@@@@@@@@ */
+
+.header {
+  position: fixed;
+  height: var(--header-height);
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 0 1.5rem 0 calc(var(--nav-width) + 1.5rem);
+  background-color: var(--white-color);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: 0.5s;
+}
+
+.header__toggle {
+  font-size: 1.5rem;
+  color: var(--first-color);
+  cursor: pointer;
+  display: flex;
+}
+
+.header__img {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.header__form {
+  display: flex;
+  align-items: center;
+  column-gap: 0.3rem;
+  border: 1px solid var(--border-color);
+  border-radius: 1.5rem;
+  padding: 0.3rem 0.5rem;
+  width: 400px;
+}
+
+.header__input {
+  background: transparent;
+  font-weight: 600;
+  width: 100%;
+}
+
+input[type='search']::-webkit-search-cancel-button {
+  -webkit-appearance: none;
+  height: 1rem;
+  width: 1rem;
+  border-radius: 50rem;
+  background: url(https://pro.fontawesome.com/releases/v5.10.0/svgs/solid/times-circle.svg)
+    no-repeat 50% 50%;
+  background-size: contain;
+  opacity: 0;
+  pointer-events: none;
+}
+
+input[type='search']:focus::-webkit-search-cancel-button {
+  opacity: 0.3;
+  pointer-events: all;
+}
+
+/* @@@@@@@@@@@@ side bar @@@@@@@@@@@@ */
+
+.sidebar {
+  background-color: var(--first-color);
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  padding: 1rem 1rem 0 0;
+  width: var(--nav-width);
+  transition: 0.5s;
+}
+
+.nav {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  overflow: hidden;
+}
+
+.nav__logo,
+.nav__link {
+  display: flex;
+  align-items: center;
+  column-gap: 1rem;
+  padding-left: 1.5rem;
+}
+
+.nav__logo {
+  margin-bottom: 3rem;
+}
+
+.nav__logo-icon {
+  font-size: 1.3rem;
+  color: var(--white-color);
+}
+
+.nav__logo-name {
+  color: var(--white-color);
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+
+.nav__link {
+  position: relative;
+  color: var(--first-color-light);
+  margin-bottom: 2rem;
+  width: max-content;
+
+  transition: 0.3s;
+}
+
+.nav__link:hover {
+  color: var(--white-color);
+}
+
+.nav__icon {
+  font-size: 1.3rem;
+}
+
+/* @@@@@@@@@@@@ JS classes @@@@@@@@@@@@ */
+
+/* show sidebar */
+.show {
+  width: calc(var(--nav-width) + 150px);
+}
+
+/* add padding body & header */
+.body-pd {
+  padding-left: calc(var(--nav-width) + 170px);
+}
+
+/* active links */
+.active {
+  color: var(--white-color);
+}
+
+.active::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  width: 3px;
+  height: 30px;
+  background-color: var(--white-color);
+}
+
+/* @@@@@@@@@@@@@@@@ cards @@@@@@@@@@@@@@@@@@ */
+
+.cards {
+  padding: 2rem 0;
+}
+
+.card__container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  align-items: center;
+  gap: 1rem;
+}
+
+.card {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  column-gap: 0.8rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 2px 5px hsl(0, 0%, 80%);
+  height: 100px;
+  padding: 1.2rem;
+  transition: 0.4s;
+}
+
+.card__title {
+  font-size: 2rem;
+  color: var(--first-color-light);
+  transition: 0.4s;
+}
+
+.card__description {
+  font-size: 0.9rem;
+  font-weight: 600;
+  transition: 0.4s;
+}
+
+.card__icon {
+  font-size: 2.5rem;
+  display: flex;
+  color: var(--text-color);
+  padding-top: 0.3rem;
+  transition: 0.4s;
+}
+
+.card:hover {
+  background-color: var(--first-color);
+  cursor: pointer;
+}
+
+.card:hover .card__description {
+  color: var(--white-color);
+}
+
+.card:hover .card__icon {
+  color: var(--white-color);
+}
+
+/* @@@@@@@@@@@@@@@@ recent @@@@@@@@@@@@@@@@@@ */
+
+.recent__container {
+  display: grid;
+  column-gap: 1rem;
+  grid-template-columns: 2fr 1fr;
+  /* min-height: calc(100vh - (cards height  + card section padding + header height + ...)); */
+  min-height: calc(100vh - (100px + 11rem));
+  margin-bottom: 1rem;
+}
+
+.recent__orders,
+.recent__customers {
+  box-shadow: 0 2px 5px hsl(0, 0%, 80%);
+  border-radius: 0.5rem;
+  padding: 1.5rem 1rem;
+}
+
+.recent__orders-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.recent__orders-header h2,
+.recent__customers h2 {
+  color: var(--first-color-light);
+}
+
+.recent__orders-header,
+.recent__customers h2 {
+  margin-bottom: 1.5rem;
+}
+
+.recent__orders-header button {
+  background-color: var(--first-color);
+  color: var(--white-color);
+  font-size: 0.8rem;
+  padding: 0.2rem 0.6rem;
+  border-radius: 0.3rem;
+}
+
+.recent__orders-table {
+  width: 100%;
+}
+
+.recent__orders-table,
+.recent__orders-table tbody {
+  display: grid;
+  row-gap: 0.7rem;
+}
+
+.recent__orders-table tr {
+  display: grid;
+  grid-template-columns: 2.5fr 1fr 1.5fr 2fr;
+  column-gap: 0.2rem;
+  padding: 0.5rem;
+  align-items: center;
+  transition: 0.3s;
+}
+
+.recent__orders-table tr:not(:last-child) {
+  border-bottom: 1px solid hsl(186, 0%, 90%);
+}
+
+.recent__orders-table th:nth-child(1),
+.recent__orders-table td:nth-child(1) {
+  text-align: start;
+}
+
+.recent__orders-table th:nth-child(2),
+.recent__orders-table td:nth-child(2) {
+  text-align: center;
+}
+
+.recent__orders-table th:nth-child(3),
+.recent__orders-table td:nth-child(3) {
+  text-align: center;
+}
+
+.recent__orders-table th:nth-child(4),
+.recent__orders-table td:nth-child(4) {
+  text-align: end;
+}
+
+.recent__orders-table th,
+.recent__orders-table td {
+  text-transform: capitalize;
+}
+
+.recent__orders-table th {
+  font-weight: 700;
+}
+
+.recent__orders-table td {
+  font-weight: 600;
+  color: var(--text-color);
+  transition: 0.3s;
+}
+
+.recent__orders-table td:nth-child(4) {
+  color: var(--white-color);
+  font-size: 0.75rem;
+  padding: 0.2rem 0.5rem;
+  border-radius: 0.2rem;
+  justify-self: end;
+}
+
+.delivered {
+  background-color: #3ec70b;
+}
+.pending {
+  background-color: #e48900;
+}
+.return {
+  background-color: #ff1700;
+}
+.inprogress {
+  background-color: #3e00ff;
+}
+
+.recent__orders-table tbody tr:hover {
+  background-color: hsl(186, 56%, 50%);
+  color: var(--white-color);
+  cursor: pointer;
+}
+
+.recent__orders-table tbody tr:hover td {
+  color: var(--white-color);
+}
+
+.recent__customers-container {
+  display: grid;
+  row-gap: 0.3rem;
+}
+
+.recent__customer {
+  display: flex;
+  align-items: center;
+  column-gap: 1rem;
+  padding: 0.3rem;
+  transition: 0.4s;
+}
+
+.recent__img {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 2px solid var(--first-color-light);
+}
+
+.recent__customer-name {
+  line-height: 1;
+  font-size: 1rem;
+}
+
+.recent__customer-country {
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: var(--text-color);
+}
+
+.recent__customer:hover {
+  background-color: hsl(186, 56%, 50%);
+  color: var(--white-color);
+  cursor: pointer;
+}
+
+.recent__customer:hover .recent__img {
+  border: 2px solid var(--white-color);
+}
+
+/* @@@@@@@@@@@@@@@@@@@ footer copy @@@@@@@@@@@@@@@@@@@@  */
+
+.footer__copy {
+  text-align: center;
+  font-size: 0.6rem;
+  margin-bottom: 0.3rem;
+}
+
+.footer__copy a {
+  color: var(--first-color);
+}
+
+/*@@@@@@@@@@@@@@@@@ scroll bar @@@@@@@@@@@@@@@@@*/
+
+::-webkit-scrollbar {
+  background-color: hsl(0, 0%, 80%);
+  width: 0.6rem;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: hsl(0, 0%, 65%);
+  border-radius: 0.5rem;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: hsl(0, 0%, 50%);
+}
+
+/* @@@@@@@@@@@@@@@@ preloader @@@@@@@@@@@@@@@@@@ */
+
+.preloader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+
+  background: hsla(186, 56%, 80%, 0.2);
+  backdrop-filter: blur(20px);
+}
+
+.preloader__icon {
+  font-size: 6rem;
+  color: var(--first-color);
+  animation: preloader 2s linear infinite;
+  margin: 4rem 0 0 var(--nav-width);
+}
+
+@keyframes preloader {
+  0% {
+    transform: rotate(0);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}

@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- @@@@@@@@@@@@@@@ favicon @@@@@@@@@@@@@@@ -->
+    <link
+      rel="shortcut icon"
+      href="./assets/img/favicon.png"
+      type="image/x-icon"
+    />
+
+    <!-- @@@@@@@@@@@@@@@ boxicons @@@@@@@@@@@@@@@ -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css"
+    />
+
+    <!-- @@@@@@@@@@@@@@@ CSS @@@@@@@@@@@@@@@ -->
+    <link rel="stylesheet" href="./assets/css/styles.css" />
+
+    <!-- @@@@@@@@@@@@@@@ responsive @@@@@@@@@@@@@@@ -->
+    <link rel="stylesheet" href="./assets/css/responsive.css" />
+
+    <title>Dashboard Sidebar Menu</title>
+  </head>
+  <body id="body">
+    <!-- @@@@@@@@@@@@@@@@@@@ preloader @@@@@@@@@@@@@@@@@@@@ -->
+    <div class="preloader" id="preloader">
+      <i class="bx bx-loader preloader__icon"></i>
+    </div>
+
+    <!-- @@@@@@@@@@@@@@@ header @@@@@@@@@@@@@@@ -->
+    <header class="header" id="header">
+      <div class="header__toggle">
+        <i class="bx bx-menu" id="header-toggle"></i>
+      </div>
+
+      <form action="" class="header__form">
+        <i class="bx bx-search-alt-2"></i
+        ><input
+          placeholder="Search here"
+          type="search"
+          name=""
+          id=""
+          class="header__input"
+        />
+      </form>
+
+      <div class="header__img">
+        <img src="./assets/img/customer3.jpg" alt="" />
+      </div>
+    </header>
+
+    <!-- @@@@@@@@@@@@@@@ side bar @@@@@@@@@@@@@@@ -->
+
+    <div class="sidebar" id="sidebar">
+      <nav class="nav">
+        <div>
+          <a href="#" class="nav__logo">
+            <i class="bx bxs-dashboard nav__logo-icon"></i>
+            <span class="nav__logo-name">Dashboard</span>
+          </a>
+
+          <ul class="nav__list">
+            <li class="nav__item">
+              <a href="#" class="nav__link active">
+                <i class="bx bx-home-alt nav__icon"></i>
+                <span class="nav__name">Home</span>
+              </a>
+            </li>
+
+            <li class="nav__item">
+              <a href="#" class="nav__link">
+                <i class="bx bx-user nav__icon"></i>
+                <span class="nav__name">Users</span>
+              </a>
+            </li>
+
+            <li class="nav__item">
+              <a href="#" class="nav__link">
+                <i class="bx bx-message-square-detail nav__icon"></i>
+                <span class="nav__name">Messages</span>
+              </a>
+            </li>
+
+            <li class="nav__item">
+              <a href="#" class="nav__link">
+                <i class="bx bx-bookmark nav__icon"></i>
+                <span class="nav__name">Favorites</span>
+              </a>
+            </li>
+
+            <li class="nav__item">
+              <a href="#" class="nav__link">
+                <i class="bx bx-folder nav__icon"></i>
+                <span class="nav__name">Data</span>
+              </a>
+            </li>
+
+            <li class="nav__item">
+              <a href="#" class="nav__link">
+                <i class="bx bx-bar-chart-alt-2 nav__icon"></i>
+                <span class="nav__name">Analytics</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <div>
+          <a href="#" class="nav__link">
+            <i class="bx bx-log-out nav__icon"></i>
+            <span class="nav__name">Log Out</span>
+          </a>
+        </div>
+      </nav>
+    </div>
+
+    <!-- @@@@@@@@@@@@@@@ cards @@@@@@@@@@@@@@@ -->
+    <section class="cards">
+      <div class="card__container">
+        <div class="card">
+          <div>
+            <h2 class="card__title">1,504</h2>
+            <span class="card__description">Daily Views</span>
+          </div>
+          <div class="card__icon">
+            <i class="bx bx-show"></i>
+          </div>
+        </div>
+        <div class="card">
+          <div>
+            <h2 class="card__title">80</h2>
+            <span class="card__description">Sales</span>
+          </div>
+          <div class="card__icon">
+            <i class="bx bx-cart-alt"></i>
+          </div>
+        </div>
+        <div class="card">
+          <div>
+            <h2 class="card__title">284</h2>
+            <span class="card__description">Comments</span>
+          </div>
+          <div class="card__icon">
+            <i class="bx bx-comment-dots"></i>
+          </div>
+        </div>
+        <div class="card">
+          <div>
+            <h2 class="card__title">$7,842</h2>
+            <span class="card__description">Earning</span>
+          </div>
+          <div class="card__icon">
+            <i class="bx bx-money"></i>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- @@@@@@@@@@@@@@@ recent @@@@@@@@@@@@@@@ -->
+    <section class="recent">
+      <div class="recent__container">
+        <div class="recent__orders">
+          <div class="recent__orders-header">
+            <h2>Recent Orders</h2>
+            <button>View All</button>
+          </div>
+
+          <table class="recent__orders-table">
+            <thead>
+              <tr>
+                <th>Name</th>
+                <th>Price</th>
+                <th>Payment</th>
+                <th>Status</th>
+              </tr>
+            </thead>
+
+            <tbody>
+              <tr>
+                <td class="recent__orders-name">star refrigerator</td>
+                <td class="recent__orders-price">$1200</td>
+                <td class="recent__orders-payment">Paid</td>
+                <td class="recent__orders-status delivered">Deliverd</td>
+              </tr>
+              <tr>
+                <td class="recent__orders-name">window coolers</td>
+                <td class="recent__orders-price">$110</td>
+                <td class="recent__orders-payment">due</td>
+                <td class="recent__orders-status pending">pending</td>
+              </tr>
+              <tr>
+                <td class="recent__orders-name">speakers</td>
+                <td class="recent__orders-price">$620</td>
+                <td class="recent__orders-payment">paid</td>
+                <td class="recent__orders-status return">return</td>
+              </tr>
+              <tr>
+                <td class="recent__orders-name">hp laptop</td>
+                <td class="recent__orders-price">$110</td>
+                <td class="recent__orders-payment">due</td>
+                <td class="recent__orders-status inprogress">in progress</td>
+              </tr>
+              <tr>
+                <td class="recent__orders-name">apple watch</td>
+                <td class="recent__orders-price">$110</td>
+                <td class="recent__orders-payment">paid</td>
+                <td class="recent__orders-status delivered">delivered</td>
+              </tr>
+              <tr>
+                <td class="recent__orders-name">wall fan</td>
+                <td class="recent__orders-price">$250</td>
+                <td class="recent__orders-payment">due</td>
+                <td class="recent__orders-status return">return</td>
+              </tr>
+              <tr>
+                <td class="recent__orders-name">adidas shoes</td>
+                <td class="recent__orders-price">$123</td>
+                <td class="recent__orders-payment">paid</td>
+                <td class="recent__orders-status inprogress">in progress</td>
+              </tr>
+              <tr>
+                <td class="recent__orders-name">denim shoes</td>
+                <td class="recent__orders-price">$160</td>
+                <td class="recent__orders-payment">due</td>
+                <td class="recent__orders-status pending">pending</td>
+              </tr>
+              <tr>
+                <td class="recent__orders-name">casual shoes</td>
+                <td class="recent__orders-price">$100</td>
+                <td class="recent__orders-payment">paid</td>
+                <td class="recent__orders-status pending">pending</td>
+              </tr>
+              <tr>
+                <td class="recent__orders-name">denim shirts</td>
+                <td class="recent__orders-price">$99</td>
+                <td class="recent__orders-payment">due</td>
+                <td class="recent__orders-status inprogress">in progress</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="recent__customers">
+          <h2>Recent Customers</h2>
+          <div class="recent__customers-container">
+            <div class="recent__customer">
+              <div class="recent__img">
+                <img src="./assets/img/customer1.jpg" alt="" />
+              </div>
+
+              <div>
+                <h3 class="recent__customer-name">Antoni</h3>
+                <span class="recent__customer-country">Italy</span>
+              </div>
+            </div>
+            <div class="recent__customer">
+              <div class="recent__img">
+                <img src="./assets/img/customer2.jpg" alt="" />
+              </div>
+
+              <div>
+                <h3 class="recent__customer-name">David</h3>
+                <span class="recent__customer-country">UAE</span>
+              </div>
+            </div>
+            <div class="recent__customer">
+              <div class="recent__img">
+                <img src="./assets/img/customer3.jpg" alt="" />
+              </div>
+
+              <div>
+                <h3 class="recent__customer-name">Amit</h3>
+                <span class="recent__customer-country">Spain</span>
+              </div>
+            </div>
+            <div class="recent__customer">
+              <div class="recent__img">
+                <img src="./assets/img/customer4.jpg" alt="" />
+              </div>
+
+              <div>
+                <h3 class="recent__customer-name">Mahsan</h3>
+                <span class="recent__customer-country">Germany</span>
+              </div>
+            </div>
+            <div class="recent__customer">
+              <div class="recent__img">
+                <img src="./assets/img/customer5.jpg" alt="" />
+              </div>
+
+              <div>
+                <h3 class="recent__customer-name">Lili</h3>
+                <span class="recent__customer-country">USA</span>
+              </div>
+            </div>
+            <div class="recent__customer">
+              <div class="recent__img">
+                <img src="./assets/img/customer6.jpg" alt="" />
+              </div>
+
+              <div>
+                <h3 class="recent__customer-name">Joe</h3>
+                <span class="recent__customer-country">China</span>
+              </div>
+            </div>
+            <div class="recent__customer">
+              <div class="recent__img">
+                <img src="./assets/img/customer7.jpg" alt="" />
+              </div>
+
+              <div>
+                <h3 class="recent__customer-name">Arkan</h3>
+                <span class="recent__customer-country">France</span>
+              </div>
+            </div>
+            <div class="recent__customer">
+              <div class="recent__img">
+                <img src="./assets/img/customer8.jpg" alt="" />
+              </div>
+
+              <div>
+                <h3 class="recent__customer-name">Ralph</h3>
+                <span class="recent__customer-country">Iran</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- @@@@@@@@@@@@@@@@@@@ footer copy @@@@@@@@@@@@@@@@@@@@ -->
+    <p class="footer__copy">
+      © 2022 coded by
+      <a href="https://github.com/soroushmdn" target="_blank"
+        >Soroush Karimi.</a
+      >
+      Design from Bedimcode.
+    </p>
+
+    <!-- @@@@@@@@@@@@@@@ Main JS @@@@@@@@@@@@@@@ -->
+    <script src="./assets/js/main.js"></script>
+  </body>
+</html>

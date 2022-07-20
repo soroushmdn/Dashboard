@@ -1,0 +1,135 @@
+@media (max-width: 992px) {
+  /* @@@@@@@@@@@@ header @@@@@@@@@@@@ */
+
+  .header__form {
+    width: 300px;
+  }
+
+  .show {
+    width: calc(var(--nav-width) + 120px);
+  }
+
+  .body-pd {
+    padding-left: calc(var(--nav-width) + 140px);
+  }
+
+  /* @@@@@@@@@@@@ cards @@@@@@@@@@@@ */
+
+  .card__container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .recent__orders-header h2,
+  .recent__customers h2 {
+    font-size: 1rem;
+  }
+
+  /* @@@@@@@@@@@@@@@@ recent @@@@@@@@@@@@@@@@@@ */
+
+  .recent__container {
+    min-height: calc(100vh - (200px + 12rem));
+  }
+}
+
+@media (max-width: 767px) {
+  body {
+    padding: 0 1rem;
+  }
+
+  /* @@@@@@@@@@@@ header & sidebar @@@@@@@@@@@@ */
+
+  .header {
+    padding: 0 1rem;
+  }
+
+  .sidebar {
+    left: -30%;
+  }
+
+  .show {
+    width: var(--nav-width);
+    left: 0;
+  }
+
+  .body-pd {
+    padding-left: calc(var(--nav-width) + 1rem);
+  }
+
+  /* @@@@@@@@@@@@@@@@ recent @@@@@@@@@@@@@@@@@@ */
+
+  .recent__container {
+    row-gap: 1.5rem;
+    grid-template-columns: 1fr;
+    min-height: initial;
+  }
+
+  .recent__orders-header h2,
+  .recent__customers h2 {
+    font-size: 1.5rem;
+  }
+
+  /* @@@@@@@@@@@@@@@@ preloader @@@@@@@@@@@@@@@@@@ */
+
+  .preloader__icon {
+    font-size: 5rem;
+    margin: 4rem 0 0 0;
+  }
+}
+
+@media (max-width: 576px) {
+  /* @@@@@@@@@@@@ header @@@@@@@@@@@@ */
+  .header__form {
+    width: 65%;
+  }
+
+  /* @@@@@@@@@@@@ cards @@@@@@@@@@@@ */
+  .card__container {
+    grid-template-columns: 1fr;
+  }
+
+  .card {
+    padding: 1rem 1.5rem;
+  }
+}
+
+@media (max-width: 374px) {
+  /* @@@@@@@@@@@@ header & sidebar @@@@@@@@@@@@ */
+  .header__form {
+    width: 55%;
+  }
+
+  .nav__logo,
+  .nav__link {
+    padding-left: 0.8rem;
+  }
+
+  .show {
+    width: 50px;
+  }
+
+  .body-pd {
+    padding-left: calc(50px + 1rem);
+  }
+
+  /* @@@@@@@@@@@@@@@@ cards @@@@@@@@@@@@@@@@@@ */
+
+  .card {
+    height: 80px;
+    padding: 0.5rem 1rem;
+  }
+
+  /* @@@@@@@@@@@@@@@@ recent @@@@@@@@@@@@@@@@@@ */
+
+  .recent__orders-header h2,
+  .recent__customers h2 {
+    font-size: 1rem;
+  }
+
+  .recent__orders-table tr {
+    font-size: 0.75rem;
+  }
+
+  .recent__orders-table td:nth-child(4) {
+    font-size: 0.6rem;
+  }
+}
