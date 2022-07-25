@@ -7,7 +7,7 @@
 
   --first-color: hsl(186, 56%, 30%);
   --first-color-light: hsl(186, 56%, 50%);
-  --body-color: hsl(186, 50%, 98%);
+  --body-color: hsl(186, 50%, 95%);
   --border-color: hsl(186, 0%, 70%);
   --white-color: hsl(252, 38%, 97%);
   --text-color: hsl(186, 0%, 50%);
@@ -225,6 +225,7 @@ input[type='search']:focus::-webkit-search-cancel-button {
 }
 
 .card {
+  background-color: var(--white-color);
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
@@ -282,6 +283,7 @@ input[type='search']:focus::-webkit-search-cancel-button {
 
 .recent__orders,
 .recent__customers {
+  background-color: var(--white-color);
   box-shadow: 0 2px 5px hsl(0, 0%, 80%);
   border-radius: 0.5rem;
   padding: 1.5rem 1rem;
